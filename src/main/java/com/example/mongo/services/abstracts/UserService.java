@@ -10,6 +10,9 @@ import java.util.List;
 @Service
 public interface UserService {
     Result add(User user);
+    Result delete(String id);
     DataResult<List<User>> getAll();
     DataResult<User> getUserById(String id);
+
+
 }

@@ -25,6 +25,12 @@ public class UserManager implements UserService {
     }
 
     @Override
+    public Result delete(String id) {
+        this.userRepository.deleteById(id);
+        return new SuccessResult("Urun silindi");
+    }
+
+    @Override
     public DataResult<List<User>> getAll() {
         return new SuccessDataResult<List<User>>(this.userRepository.findAll(),"Urunler getirildi");
     }

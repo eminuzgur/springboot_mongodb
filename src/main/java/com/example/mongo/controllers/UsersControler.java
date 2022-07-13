@@ -29,4 +29,9 @@ public class UsersControler  {
     public DataResult<User> getUserById(@RequestParam String id){
         return userService.getUserById(id);
     }
+
+    @DeleteMapping("/deleteById")
+    public Result deleteById(@RequestParam String id){
+        return this.userService.delete(id);
+    }
 }
