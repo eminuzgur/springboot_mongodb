@@ -20,4 +20,5 @@ public class User {
     @GeneratedValue
     private String id;
     private String name;
+    private Adress adress;
 }
